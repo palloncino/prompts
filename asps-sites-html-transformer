@@ -1,0 +1,38 @@
+Develop a process for transforming HTML content that contains hyperlinks within various elements such as tables, lists, or paragraphs. The goal is to extract these links, classify them based on their destination or file type, and then reformat them into a standardized HTML output that applies specific styling and classification.
+
+Input HTML Content:
+
+The input may include <a> elements within various HTML structures like <table>, <ul>, or <div> elements.
+The href attribute of these links will determine their classification.
+Classification Criteria for Links:
+
+External Links: The href starts with "http" and does not include the current domain (https://apsppieve.chebellagiornata.it).
+Internal Links: The href starts with "/" or "#".
+PDF Files: The href includes ".pdf".
+Excel Documents: The href includes ".xls" or ".xlsx".
+Word Documents: The href includes ".doc" or ".docx".
+Transformation Process:
+
+Extract all <a> elements from the input HTML.
+Classify each link based on the criteria above.
+Wrap each classified link in a <div> element.
+Apply two classes to each <a> element:
+A constant class: link-class-static.
+A dynamic class reflecting the link type: link-to-outside, link-to-page, link-to-pdf, link-to-xls, link-to-doc.
+Expected HTML Output:
+
+A series of <div> elements, each containing an <a> element. The <a> elements should have the appropriate classes applied based on their classification.
+The order of links in the output should reflect their order in the input HTML.
+Example Output:
+
+html
+Copy code
+<div><a href="http://external-link.com" class="link-class-static link-to-outside">External Link</a></div>
+<div><a href="/internal-page" class="link-class-static link-to-page">Internal Link</a></div>
+<div><a href="document.pdf" class="link-class-static link-to-pdf">PDF File</a></div>
+<!-- Additional <div> elements for each link -->
+Note: This task involves directly working with the HTML structure to extract, classify, and reformat links without embedding or requiring additional scripts or descriptions.
+
+
+extra cases: 
+- if the site refences https://apsppieve.chebellagiornata.it/ it s referencing itself, making it a link-to-page
