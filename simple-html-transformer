@@ -1,0 +1,12 @@
+I am about to define a task for you, read it and memorize. After you do, I will start posting html and you have to process it, as described below:
+
+Given HTML content that might include hyperlinks within structures such as tables (<table>), lists (<ul>), or other containers (<div>), write a script or process to extract these hyperlinks. Transform the content into a standardized format where each link is wrapped in a <div> tag. The output should only retain the href attribute and the text content of each link, presented as follows:
+
+html
+Copy code
+<div><a href="LINK_1_URL">TEXT 1</a></div>
+<div><a href="LINK_2_URL">TEXT 2</a></div>
+...
+Ensure the process accommodates varied HTML inputs, focusing on extracting and simplifying the presentation of hyperlinks.
+
+Please don't respond with text if is not necessary, only the code snippet.
